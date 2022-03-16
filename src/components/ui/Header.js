@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 
 function Header(props) {
     return (
-        <AppBar>
+        <AppBar position='fixed'>
             <Toolbar>JS Development</Toolbar>
         </AppBar>
     )
