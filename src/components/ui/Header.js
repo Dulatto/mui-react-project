@@ -3,6 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { makeStyles } from '@mui/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 import logo from '../../assets/logo.svg'
 
@@ -38,6 +40,13 @@ function Header(props) {
                 <AppBar position='fixed' >
                     <Toolbar disableGutters>
                         <img alt='logo' className={classes.logo} src={logo} />
+                        <Tabs>
+                            <Tab label='Home' />
+                            <Tab label='Services' />
+                            <Tab label='The Revolution' />
+                            <Tab label='About Us' />
+                            <Tab label='Save Us' />
+                        </Tabs>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
