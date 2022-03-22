@@ -28,6 +28,16 @@ const useStyles = makeStyles(theme => ({
     },
     logo: {
         height: '5em'
+    },
+    tabContainer: {
+        marginLeft: 'auto'
+    },
+    tab: {
+        fontFamily: 'Raleway!important',
+        textTransform: 'none!important',
+        fontWeight: '700!important',
+        color: 'white!important',
+        fintSize: '1rem!important',
     }
 }));
 
@@ -40,12 +50,12 @@ function Header(props) {
                 <AppBar position='fixed' >
                     <Toolbar disableGutters>
                         <img alt='logo' className={classes.logo} src={logo} />
-                        <Tabs>
-                            <Tab label='Home' />
-                            <Tab label='Services' />
-                            <Tab label='The Revolution' />
-                            <Tab label='About Us' />
-                            <Tab label='Save Us' />
+                        <Tabs className={classes.tabContainer}>
+                            <Tab className={classes.tab} label='Home' />
+                            <Tab className={classes.tab} label='Services' />
+                            <Tab className={classes.tab} label='The Revolution' />
+                            <Tab className={classes.tab} label='About Us' />
+                            <Tab className={classes.tab} label='Save Us' />
                         </Tabs>
                     </Toolbar>
                 </AppBar>
