@@ -17,8 +17,12 @@ export default createTheme({
         }
     },
     typography: {
-        h3: {
-            fontWeight: 300
+        tab: {
+            fontFamily: 'Raleway!important',
+            textTransform: 'none!important',
+            fontWeight: '700!important',
+            color: 'white!important',
+            fontSize: '0.85rem!important',
         }
     }
 })

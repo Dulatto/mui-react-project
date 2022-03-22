@@ -33,11 +33,9 @@ const useStyles = makeStyles(theme => ({
         marginLeft: 'auto'
     },
     tab: {
-        fontFamily: 'Raleway!important',
-        textTransform: 'none!important',
-        fontWeight: '700!important',
-        color: 'white!important',
-        fintSize: '1rem!important',
+        ...theme.typography.tab,
+        minWidth: 10,
+        marginLeft: '20px!important'
     }
 }));
 
