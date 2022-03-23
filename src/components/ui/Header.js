@@ -5,6 +5,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { makeStyles } from '@mui/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Button from '@mui/material/Button';
 
 import logo from '../../assets/logo.svg'
 
@@ -36,6 +37,11 @@ const useStyles = makeStyles(theme => ({
         ...theme.typography.tab,
         minWidth: 10,
         marginLeft: '20px!important'
+    },
+    button: {
+        borderRadius: '50px!important',
+        marginLeft: '50px!important',
+        marginRight: '25px!important',
     }
 }));
 
@@ -55,6 +61,9 @@ function Header(props) {
                             <Tab className={classes.tab} label='About Us' />
                             <Tab className={classes.tab} label='Save Us' />
                         </Tabs>
+                        <Button variant='contained' color='secondary' className={classes.button}>
+                            Free Estimate
+                        </Button>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
