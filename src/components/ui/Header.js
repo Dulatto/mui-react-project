@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom'
 
 import logo from '../../assets/logo.svg'
 
@@ -62,11 +63,11 @@ function Header(props) {
                     <Toolbar disableGutters >
                         <img alt='logo' className={classes.logo} src={logo} />
                         <Tabs value={value} onChange={handleChange} className={classes.tabContainer} indicatorColor='secondary'>
-                            <Tab className={classes.tab} label='Home' />
-                            <Tab className={classes.tab} label='Services' />
-                            <Tab className={classes.tab} label='The Revolution' />
-                            <Tab className={classes.tab} label='About Us' />
-                            <Tab className={classes.tab} label='Save Us' />
+                            <Tab className={classes.tab} component={Link} to='/' label='Home' />
+                            <Tab className={classes.tab} component={Link} to='/services' label='Services' />
+                            <Tab className={classes.tab} component={Link} to='/revolution' label='The Revolution' />
+                            <Tab className={classes.tab} component={Link} to='/about' label='About Us' />
+                            <Tab className={classes.tab} component={Link} to='/contact' label='Contact Us' />
                         </Tabs>
                         <Button variant='contained' color='secondary' className={classes.button}>
                             Free Estimate
