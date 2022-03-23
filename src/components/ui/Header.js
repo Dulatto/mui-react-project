@@ -39,9 +39,11 @@ const useStyles = makeStyles(theme => ({
         marginLeft: '20px!important'
     },
     button: {
+        ...theme.typography.estimate,
         borderRadius: '50px!important',
         marginLeft: '50px!important',
         marginRight: '25px!important',
+        height: '45px!important',
     }
 }));
 
