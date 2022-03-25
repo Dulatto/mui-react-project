@@ -53,6 +53,10 @@ const useStyles = makeStyles(theme => ({
         marginLeft: '50px!important',
         marginRight: '25px!important',
         height: '45px!important',
+    },
+    menu: {
+        backgroundColor: '#0B72B9!important',
+        color: 'white!important'
     }
 }));
 
@@ -122,11 +126,14 @@ function Header(props) {
                             anchorEl={anchorEl}
                             open={open}
                             onClose={handleClose}
-                            MenuListProps={{ onMouseLeave: handleClose }}>
+                            classes={{ paper: classes.menu }}
+                            MenuListProps={{ onMouseLeave: handleClose }}
+                            elevation={0}>
                             <MenuItem
                                 onClick={() => { handleClose(); setValue(1) }}
                                 component={Link}
                                 to='/services'
+                                classes={{ root: classes.menuItem }}
                             >Services</MenuItem>
                             <MenuItem
                                 onClick={() => { handleClose(); setValue(1) }}
