@@ -83,9 +83,9 @@ function Header(props) {
         setOpen(true)
     }
     const handleMenuItemClick = (e, i) => {
-        setAnchorEl(null)
-        setOpen(false)
-        setSelectedIndex(i)
+        setAnchorEl(null);
+        setOpen(false);
+        setSelectedIndex(i);
     }
 
     const handleClose = (e) => {
@@ -150,11 +150,17 @@ function Header(props) {
                             classes={{ paper: classes.menu }}
                             MenuListProps={{ onMouseLeave: handleClose }}
                             elevation={0}>
-                            {menuOptions.map((option, i) => {
-                                <MenuItem key={i}>
+                            {menuOptions.map((option, i) => (
+                                <MenuItem
+                                    key={option}
+                                    component={Link}
+                                    to={option.link}
+                                    classes={{ root: classes.menuItem }}
+                                    onClick={(event) => { handleMenuItemClick(event, i); setValue(1); handleClose() }}
+                                    selected={i === selectedIndex && value === 1}>
                                     {option.name}
                                 </MenuItem>
-                            })}
+                            ))}
                         </Menu>
                     </Toolbar>
                 </AppBar>
