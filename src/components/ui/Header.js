@@ -261,24 +261,24 @@ function Header(props) {
                 onClose={() => setOpenDrawer(false)}
                 onOpen={() => setOpenDrawer(true)}
             >
-                <List>
-                    <ListItem component={Link} to='/'>
-                        <ListItemText >Home</ListItemText>
+                <List disablePadding>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/'>
+                        <ListItemText disableTypography >Home</ListItemText>
                     </ListItem>
-                    <ListItem component={Link} to='/services'>
-                        <ListItemText >Services</ListItemText>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/services'>
+                        <ListItemText disableTypography>Services</ListItemText>
                     </ListItem>
-                    <ListItem component={Link} to='/revolution'>
-                        <ListItemText >Revolution</ListItemText>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/revolution'>
+                        <ListItemText disableTypography>Revolution</ListItemText>
                     </ListItem>
-                    <ListItem component={Link} to='/about'>
-                        <ListItemText >About Us</ListItemText>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/about'>
+                        <ListItemText disableTypography>About Us</ListItemText>
                     </ListItem>
-                    <ListItem component={Link} to='/contact'>
-                        <ListItemText >Contact Us</ListItemText>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/contact'>
+                        <ListItemText disableTypography>Contact Us</ListItemText>
                     </ListItem>
-                    <ListItem component={Link} to='/estimate'>
-                        <ListItemText >Free Estimate</ListItemText>
+                    <ListItem onClick={() => setOpenDrawer(false)} divider button component={Link} to='/estimate'>
+                        <ListItemText disableTypography>Free Estimate</ListItemText>
                     </ListItem>
                 </List>
             </SwipeableDrawer>
