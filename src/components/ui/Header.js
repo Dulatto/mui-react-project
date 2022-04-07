@@ -159,7 +159,7 @@ function Header(props) {
             ariaOwns: anchorEl ? 'simple-menu' : undefined, ariaPopup: anchorEl ? 'true' : undefined,
             mouseOver: event => handleClick(event)
         },
-        { name: 'The Revolution', link: '/revolition', activeIndex: 2 },
+        { name: 'The Revolution', link: '/revolution', activeIndex: 2 },
         { name: 'About Us', link: '/about', activeIndex: 3 },
         { name: 'Contact Us', link: '/contact', activeIndex: 4 }
     ]
@@ -190,6 +190,7 @@ function Header(props) {
                 indicatorColor='secondary'>
                 {routes.map((route, index) => (
                     <Tab
+                        key={`${route}${index}`}
                         className={classes.tab}
                         component={Link}
                         to={route.link}
@@ -210,7 +211,8 @@ function Header(props) {
                 onClose={handleClose}
                 classes={{ paper: classes.menu }}
                 MenuListProps={{ onMouseLeave: handleClose }}
-                elevation={0}>
+                elevation={0}
+                keepMounted>
                 {menuOptions.map((option, i) => (
                     <MenuItem
                         key={option}
@@ -237,21 +239,19 @@ function Header(props) {
                 classes={{ paper: classes.drawer }}
             >
                 <List disablePadding>
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(0) }} divider button component={Link} to='/' selected={value === 0}>
-                        <ListItemText disableTypography className={value === 0 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem} >Home</ListItemText>
-                    </ListItem>
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(1) }} divider button component={Link} to='/services' selected={value === 1}>
-                        <ListItemText disableTypography className={value === 1 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>Services</ListItemText>
-                    </ListItem>
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(2) }} divider button component={Link} to='/revolution' selected={value === 2}>
-                        <ListItemText disableTypography className={value === 2 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>Revolution</ListItemText>
-                    </ListItem>
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(3) }} divider button component={Link} to='/about' selected={value === 3}>
-                        <ListItemText disableTypography className={value === 3 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>About Us</ListItemText>
-                    </ListItem>
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(4) }} divider button component={Link} to='/contact' selected={value === 4}>
-                        <ListItemText disableTypography className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>Contact Us</ListItemText>
-                    </ListItem>
+                    {routes.map(route => (
+                        <ListItem
+                            key={`${route}${route.activeIndex}`}
+                            divider
+                            button
+                            component={Link}
+                            to={route.link}
+                            selected={value === route.activeIndex}
+                            onClick={() => { setOpenDrawer(false); setValue(route.activeIndex) }}
+                        >
+                            <ListItemText disableTypography className={value === route.activeIndex ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>{route.name}</ListItemText>
+                        </ListItem>
+                    ))}
                     <ListItem onClick={() => { setOpenDrawer(false); setValue(5) }} divider button component={Link} to='/estimate' className={classes.drawerItemEstimate} selected={value === 5}>
                         <ListItemText disableTypography className={value === 5 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>Free Estimate</ListItemText>
                     </ListItem>
