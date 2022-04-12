@@ -112,9 +112,9 @@ const useStyles = makeStyles(theme => ({
     },
     drawerItemSelected: {
         '& .MuiListItemText-root': {
-            opacity: 1
+            opacity: '1.0!important'
         },
-        opacity: '1.0!important'
+
     },
     appbar: {
         zIndex: theme.zIndex.modal + 1
@@ -260,7 +260,7 @@ function Header(props) {
                             <ListItemText disableTypography className={classes.drawerItem}>{route.name}</ListItemText>
                         </ListItem>
                     ))}
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(5) }} divider button component={Link} to='/estimate' classes={{ root: classes.drawerItemEstimate }} selected={value === 5}>
+                    <ListItem onClick={() => { setOpenDrawer(false); setValue(5) }} divider button component={Link} to='/estimate' classes={{ root: classes.drawerItemEstimate, selected: classes.drawerItemSelected }} selected={value === 5}>
                         <ListItemText disableTypography className={classes.drawerItem}>Free Estimate</ListItemText>
                     </ListItem>
                 </List>
