@@ -6,14 +6,14 @@ const arcOrange = '#FFBA60';
 export default createTheme({
     palette: {
         common: {
-            blue: `${arcBlue}`,
-            orange: `${arcOrange}`
+            blue: '#0B72B9',
+            orange: '#FFBA60'
         },
         primary: {
-            main: `${arcBlue}`
+            main: '#0B72B9'
         },
         secondary: {
-            main: `${arcOrange}`
+            main: '#FFBA60'
         }
     },
     typography: {
