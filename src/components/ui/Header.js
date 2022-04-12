@@ -115,7 +115,8 @@ const useStyles = makeStyles(theme => ({
 
     },
     appbar: {
-        zIndex: theme.zIndex.modal + 1
+        zIndex: theme.zIndex.modal + 1,
+
     }
 }));
 
