@@ -111,6 +111,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: '#FFBA60!important',
     },
     drawerItemSelected: {
+        '& .MuiListItemText-root': {
+            opacity: 1
+        },
         opacity: '1.0!important'
     },
     appbar: {
@@ -251,13 +254,14 @@ function Header(props) {
                             component={Link}
                             to={route.link}
                             selected={value === route.activeIndex}
+                            classes={{ selected: classes.drawerItemSelected }}
                             onClick={() => { setOpenDrawer(false); setValue(route.activeIndex) }}
                         >
-                            <ListItemText disableTypography className={value === route.activeIndex ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>{route.name}</ListItemText>
+                            <ListItemText disableTypography className={classes.drawerItem}>{route.name}</ListItemText>
                         </ListItem>
                     ))}
-                    <ListItem onClick={() => { setOpenDrawer(false); setValue(5) }} divider button component={Link} to='/estimate' className={classes.drawerItemEstimate} selected={value === 5}>
-                        <ListItemText disableTypography className={value === 5 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>Free Estimate</ListItemText>
+                    <ListItem onClick={() => { setOpenDrawer(false); setValue(5) }} divider button component={Link} to='/estimate' classes={{ root: classes.drawerItemEstimate }} selected={value === 5}>
+                        <ListItemText disableTypography className={classes.drawerItem}>Free Estimate</ListItemText>
                     </ListItem>
                 </List>
             </SwipeableDrawer>
