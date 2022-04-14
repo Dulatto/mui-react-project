@@ -1,8 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@mui/styles';
 
-import footerAdornment from '../../assets/Footer Adornment.svg'
-
+import footerAdornment from '../../assets/Footer Adornment.svg';
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -22,6 +21,8 @@ const useStyles = makeStyles(theme => ({
         }
     }
 }))
+
+
 
 export default function Footer() {
     const classes = useStyles()
