@@ -52,13 +52,49 @@ export default function Footer() {
                             Services
                         </Grid>
                         <Grid item className={classes.link}>
-                            Services
+                            Custom Software Development
                         </Grid>
                         <Grid item className={classes.link}>
-                            Services
+                            Mobile App Development
                         </Grid>
                         <Grid item className={classes.link}>
-                            Services
+                            Website Development
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item >
+                    <Grid container direction='column'>
+                        <Grid item className={classes.link}>
+                            The Revolution
+                        </Grid>
+                        <Grid item className={classes.link}>
+                            Vision
+                        </Grid>
+                        <Grid item className={classes.link}>
+                            Technology
+                        </Grid>
+                        <Grid item className={classes.link}>
+                            Proccess
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item >
+                    <Grid container direction='column'>
+                        <Grid item className={classes.link}>
+                            About Us
+                        </Grid>
+                        <Grid item className={classes.link}>
+                            History
+                        </Grid>
+                        <Grid item className={classes.link}>
+                            Team
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item >
+                    <Grid container direction='column'>
+                        <Grid item className={classes.link}>
+                            Contact Us
                         </Grid>
                     </Grid>
                 </Grid>
