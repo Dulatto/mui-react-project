@@ -38,8 +38,14 @@ export default function Footer() {
     const classes = useStyles()
     return (
         <footer className={classes.footer}>
-            <Grid container className={classes.mainContainer}>
-                <Grid item className={classes.link}>Home</Grid>
+            <Grid container justifyContent='center' className={classes.mainContainer} >
+                <Grid item >
+                    <Grid container direction='column'>
+                        <Grid item className={classes.link}>
+                            Home
+                        </Grid>
+                    </Grid>
+                </Grid>
             </Grid>
             <img alt='black decor' src={footerAdornment} className={classes.adornment} />
         </footer>
