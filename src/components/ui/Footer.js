@@ -29,6 +29,9 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Arial',
         fontSize: '0.75rem',
         fontWeight: 'bold',
+    },
+    gridItem: {
+        margin: '3em!important'
     }
 }))
 
@@ -39,15 +42,15 @@ export default function Footer() {
     return (
         <footer className={classes.footer}>
             <Grid container justifyContent='center' className={classes.mainContainer} >
-                <Grid item >
-                    <Grid container direction='column'>
+                <Grid item className={classes.gridItem}>
+                    <Grid container direction='column' spacing={2}>
                         <Grid item className={classes.link}>
                             Home
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item >
-                    <Grid container direction='column'>
+                <Grid item className={classes.gridItem}>
+                    <Grid container direction='column' spacing={2}>
                         <Grid item className={classes.link}>
                             Services
                         </Grid>
@@ -62,8 +65,8 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item >
-                    <Grid container direction='column'>
+                <Grid item className={classes.gridItem}>
+                    <Grid container direction='column' spacing={2}>
                         <Grid item className={classes.link}>
                             The Revolution
                         </Grid>
@@ -78,8 +81,8 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item >
-                    <Grid container direction='column'>
+                <Grid item className={classes.gridItem}>
+                    <Grid container direction='column' spacing={2}>
                         <Grid item className={classes.link}>
                             About Us
                         </Grid>
@@ -91,8 +94,8 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item >
-                    <Grid container direction='column'>
+                <Grid item className={classes.gridItem}>
+                    <Grid container direction='column' spacing={2}>
                         <Grid item className={classes.link}>
                             Contact Us
                         </Grid>
